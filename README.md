@@ -24,15 +24,6 @@ Open `.env` and fill in your values:
 # Required for real-time interview voice session & debrief evaluation
 GEMINI_API_KEY=your_actual_gemini_api_key_here
 
-# Optional: MongoDB URI for storing accounts & session records
-MONGODB_URI=
-
-# Optional: JWT Secret for auth tokens
-JWT_SECRET=your_jwt_secret_here
-
-# Optional: Server port (default: 3000)
-PORT=3000
-```
 
 > **Note:** Get your Gemini API key from [Google AI Studio](https://aistudio.google.com/apikey).
 
