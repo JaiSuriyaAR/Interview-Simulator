@@ -1,0 +1,56 @@
+{
+  "entities": {
+    "Session": {
+      "title": "Interview Session",
+      "description": "A recorded interview session with transcript and AI debrief.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "The UID of the user who performed the interview."
+        },
+        "config": {
+          "type": "object",
+          "description": "The configuration used for the interview session."
+        },
+        "transcript": {
+          "type": "array",
+          "description": "The full transcript of the interview session."
+        },
+        "debrief": {
+          "type": "object",
+          "description": "The AI-generated debrief for the session."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The time the session was created."
+        }
+      },
+      "required": ["userId", "config", "transcript", "debrief", "createdAt"]
+    },
+    "User": {
+      "title": "User",
+      "description": "User profile information.",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "role": { "type": "string", "enum": ["user", "admin"] },
+        "photoURL": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "email", "role"]
+    }
+  },
+  "firestore": {
+    "sessions": {
+      "schema": "Session",
+      "description": "Collection of interview sessions."
+    },
+    "users": {
+      "schema": "User",
+      "description": "Collection of user profiles."
+    }
+  }
+}

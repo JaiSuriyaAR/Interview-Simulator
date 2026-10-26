@@ -1,0 +1,10 @@
+{
+  "name": "InterviewPulse",
+  "description": "Premium minimal-luxury AI interview prep with real-time voice feedback powered by Gemini Live.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
